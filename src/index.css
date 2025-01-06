@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +11,42 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f1f5f9;
+  color: #222;
+  line-height: 1.5;
+  font-size: 0.875rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.booklist {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 5rem auto;
+  display: grid;
+  gap: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .booklist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.book {
+  background: #fff;
+  border-radius: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.book img {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  object-fit: cover;
+  height: 20rem;
+}
+
+.book h2 {
+  margin-top: 1rem;
+  font-size: 1rem;
 }
